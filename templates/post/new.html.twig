@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Создание поста{% endblock %}
+
+{% block body %}
+    <form action="/post/create" method="post">
+        <input type="text" name="photo" placeholder="Ссылка на фотографию"><br>
+        <textarea name="text" id="" cols="30" rows="10" placeholder="Содержание уроков"></textarea><br>
+        <input type="submit">
+    </form>
+{% endblock %}

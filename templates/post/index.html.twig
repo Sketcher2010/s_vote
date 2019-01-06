@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Хвастаемся){% endblock %}
+
+{% block stylesheets %}
+<style>
+    img {
+        max-width: 250px !important;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+
+{% for post in posts %}
+    <a href="/post/{{ post.id }}"><img src="{{ post.photo }}" alt=""></a>
+    <br>
+    {{ post.text }}<br>
+    {{ post.rating }}<hr>
+{% endfor %}
+
+{% endblock %}
